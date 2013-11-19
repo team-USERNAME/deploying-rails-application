@@ -1,11 +1,15 @@
 ##Pressing questions
 
-- "copy your SSH public key (cat ∼/.ssh/id_rsa.pub)into the public keys array"	- as string?- does `cookbooks/` belong in project root directory?
-- monit host_name, user_name, password?
+- "copy your SSH public key (cat ∼/.ssh/id_rsa.pub)into the public keys array"	- as string?- monit host_name, user_name, password?
 - Bershelf warning:
 
 		WARNING: Berkshelf could not be loaded
 		WARNING: Please add the berkshelf gem to your Gemfile or install it manually with `gem install berkshelf`
+
+##Anwered questions
+
+- does `cookbooks/` belong in project root directory?
+	- Yes
    
 ##Relevant inks
 
@@ -21,3 +25,5 @@
 
 ###chef solo
 - [knife solo](https://github.com/matschaffer/knife-solo)
+- [knife options (may not need)](http://docs.opscode.com/config_rb_knife.html)
+- 

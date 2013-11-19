@@ -97,3 +97,42 @@
 		WARNING: Berkshelf could not be loaded
 		WARNING: Please add the berkshelf gem to your Gemfile or install it manually with `gem install berkshelf`
     
+##5.0 Anatomy of a chef solo project
+
+###Create a project
+
+- `mkdir my_chef_projects`
+- `cd my_chef_projects`
+- `rvm gemset create chef`
+- `rvm --rvmrc --create ruby-version@chef` replace `ruby-version` with desired version
+- `gem install knife-solo berkshelf`
+- `gem list` check that knife-solo and berkself were installed; if not, install each individually
+
+###Terminology
+
+- recipe
+- cookbook
+- node
+- role
+- data bag
+- chef repository
+
+###Create a repository
+
+- `knife solo init my_first_chef_repo` should see warning, creating, setup
+- `cd my_first_chef_repo`
+
+		my_first_chec_repo/
+			.chef/
+				knife.rb
+			cookboks/
+			data_bags/
+			nodes/
+			roles/
+			site_cookbooks/
+
+- knife.rb: configuration for knife
+	- cookbook_path, node_path, role_path, data_bag_path
+	- probably leave these alone
+- cookbooks/ for other people's cookbooks we install
+- site_cookbooks/ for our own custom cookbooks
