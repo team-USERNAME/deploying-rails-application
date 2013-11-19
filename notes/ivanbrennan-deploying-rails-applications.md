@@ -75,3 +75,17 @@
 - "recipe" bundles commands to install an individual component on a system
 - Cookbook bundles related recipes
 - Berkshelf is like Bundler for recipes
+
+##4.0 Quickstart - 5 Minute Server
+
+###Stack
+
+- Ruby 1.9.3+
+- Postgres
+- Redis
+
+###Steps
+
+- install tools
+- define the server
+- 
