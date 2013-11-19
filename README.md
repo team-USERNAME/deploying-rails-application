@@ -1,7 +1,7 @@
 ##Questions
 
 - "copy your SSH public key (cat ∼/.ssh/id_rsa.pub)into the public keys array"	- as string?- monit host_name, user_name, password?
-- Bershelf warning:
+- Berkshelf warning:
 
 		WARNING: Berkshelf could not be loaded
 		WARNING: Please add the berkshelf gem to your Gemfile or install it manually with `gem install berkshelf`
