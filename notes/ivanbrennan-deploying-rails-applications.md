@@ -106,7 +106,6 @@
 - `rvm gemset create chef`
 - `rvm --rvmrc --create ruby-version@chef` replace `ruby-version` with desired version
 - `gem install knife-solo berkshelf`
-- `gem list` check that knife-solo and berkself were installed; if not, install each individually
 
 ###Terminology
 
@@ -121,6 +120,7 @@
 
 - `knife solo init my_first_chef_repo` should see warning, creating, setup
 - `cd my_first_chef_repo`
+	- rvmrc warning?
 
 		my_first_chec_repo/
 			.chef/
