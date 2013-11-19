@@ -73,3 +73,5 @@
 ###Berkshelf
 
 - "recipe" bundles commands to install an individual component on a system
+- Cookbook bundles related recipes
+- Berkshelf is like Bundler for recipes
