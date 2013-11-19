@@ -88,4 +88,12 @@
 
 - install tools
 - define the server
-- 
+- "Also copy your SSH public key (cat ∼/.ssh/id_rsa.pub) into the public keys array."
+	- as string?
+- cookbooks directory in root of project?
+- monit host_name, user_name, password?
+- Bershelf warning:
+
+		WARNING: Berkshelf could not be loaded
+		WARNING: Please add the berkshelf gem to your Gemfile or install it manually with `gem install berkshelf`
+    
