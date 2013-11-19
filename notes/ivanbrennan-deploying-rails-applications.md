@@ -182,3 +182,7 @@
 
 ##5.4 - Applying a node definition to a VPS
 
+- set up a VPS (Digital Ocean or other)
+- `ssh-copy-id root@yourserverip` to copy public key from local machine to VPS
+- go to root of cookbook directory
+- `knife solo prepare root@yourserverip` to install chef on VPS
