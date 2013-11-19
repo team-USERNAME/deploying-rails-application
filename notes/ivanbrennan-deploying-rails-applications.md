@@ -47,7 +47,29 @@
 
 ##3.0 Chef Definitions
 
-####the 'simple approach'
+####the 'simple approach' (slow, error-prone, unscalable)
 
 - create new VPS on Digital Ocean, login via SSH, apt-get packages, tweak config files, add custom package sources where newer versions needed
 - build server up in layers over time, keeping track in a text file or wiki
+
+####Automation
+
+- Chef: provisioning
+- Capistrano: deployment
+
+###Chef
+
+- use ruby DSL to represent provisioning commands
+- "role" (eg. rails app server, database server)
+- "hub and spoke" servers arrangement (10's or 100's of servers)
+- "solo" 1-10 servers, apply configurations manually as needed
+
+###Knife
+
+- command line tool: interface between local chef repository and remote server
+- "knife solo"
+	- https://github.com/matschaffer/knife-solo
+
+###Berkshelf
+
+- "recipe" bundles commands to install an individual component on a system
