@@ -97,7 +97,7 @@
 		WARNING: Berkshelf could not be loaded
 		WARNING: Please add the berkshelf gem to your Gemfile or install it manually with `gem install berkshelf`
     
-##5.0 Anatomy of a chef solo project
+##5.0 Anatomy of a Chef solo project
 
 ###Create a project
 
@@ -122,7 +122,7 @@
 - `cd my_first_chef_repo`
 	- rvmrc warning?
 
-		my_first_chec_repo/
+		my_first_chef_repo/
 			.chef/
 				knife.rb
 			cookboks/
@@ -136,3 +136,49 @@
 	- probably leave these alone
 - cookbooks/ for other people's cookbooks we install
 - site_cookbooks/ for our own custom cookbooks
+
+##5.1 A Simple Chef Cookbook
+
+###Recipe structure
+
+- ####metadata.rb
+	- metadata, os, dependencies
+- ####default.rb
+	- cookbook's default recipe
+	- recipe commands
+		- bash, package, template
+	- templates/default/ refers to distribution, *not* default recipe
+- attributes: defined in node definitions, role definitions, cookbook defaults
+	- can override defaults specified by cookbook
+
+###Cookbook attribute defaults
+
+- attributes/default.rb
+
+##5.2 A Simple Node Definition
+
+####node: single server
+
+####a redis node
+- run_list: roles and recipes; `role[rolename]`, `recipe[recipename]`
+	- attributes defined here override those in attributes/default.rb
+
+####Customising Recipes with Attributes
+- unclear about this, revisit
+
+##5.3 A simple chef role
+
+####role: like a mixin (reusable chunk of functionality applicable to many roles)
+
+####role definition
+
+- name: for accessing
+- description: human readable
+- default attributes: provide default values if node doesn't provide any
+- json_class and chef_type: disambiguate that this is a role
+- run_list: included recipes and roles
+	- recipe[recipename] -> recipe[cookbookname::defaultrecipe]
+	- recipe[cookbookname::recipename]
+
+##5.4 - Applying a node definition to a VPS
+

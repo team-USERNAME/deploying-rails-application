@@ -28,6 +28,11 @@
 		******************************
 		y[es], n[o], v[iew], c[ancel]>
 
+- cookbook-node relationship
+	- cookbook has many nodes?
+	- node has many cookbooks?
+	
+- what's the interface attribute?
 
 ##Anwers
 
@@ -49,3 +54,6 @@
 ###chef solo
 - [knife solo](https://github.com/matschaffer/knife-solo)
 - [knife options (may not need)](http://docs.opscode.com/config_rb_knife.html)
+
+###chef
+- [cookbook attribute precedence (don't delve into this yet)](http://docs.opscode.com/essentials_cookbook_attribute_files.html)
